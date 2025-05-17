@@ -1,26 +1,3 @@
-// Lab Task 2: Shipment Time Estimator
-// A logistics system tracks parcels that are categorized as LocalParcel and InternationalParcel.
-// Base class Parcel includes:
-
-// ○ Private: parcelID (string)
-// ○ Protected: weight (in kg)
-// ○ Public:
-// ■ Constructor to set parcelID and weight
-// ■ GetParcelID() getter
-
-// ● Class TimedParcel inherits from Parcel and adds:
-// ○ Protected: deliverySpeed (in km/h)
-// ○ Constructor to set all values
-// ○ Method GetEstimatedTime(float distance) → returns time = distance /
-// deliverySpeed
-
-// ● Class InternationalParcel inherits from TimedParcel and adds:
-// ○ Attribute: customsDelay (in hours)
-// ○ Method GetTotalDeliveryTime(float distance) that adds customsDelay to time
-
-// Implement all classes and write a main() function that creates an InternationalParcel and prints
-// total delivery time for a given distance.
-
 #include<iostream>
 using namespace std;
 
