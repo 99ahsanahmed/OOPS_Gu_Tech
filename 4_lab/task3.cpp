@@ -12,7 +12,10 @@ class Sensor{
             value = val;
         }
         void getValue(){
-            cout<<value<<endl;
+            cout<< value << endl;
+        }
+        string getId(){
+            return id;
         }
     protected : 
         float isThresholdExceeded(float threshold){
@@ -30,11 +33,10 @@ class TemperatureSensor : public Sensor{
         void TriggerAlarm(){
             if (temperature > isThresholdExceeded(70.5))
             {
-                cout<<"ALERT: temperature exceeded!";
-                //ID cannot be printed here, because it is private attribute
+                cout<< "ALERT: "<< getId() <<"temperature exceeded!";
             }
             else{
-                cout<<"chill scene";
+                cout<< "chill scene";
             }
         }
 };
