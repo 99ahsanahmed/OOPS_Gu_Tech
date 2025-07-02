@@ -12,13 +12,14 @@ class Project{
 
 class Freelancer{
     private:
-        string name;
+        string freelancer_name;
         Project* projects[10];
         int projectCount;
     public:
-        Freelancer(string n) : name(n), projectCount(0) {};
+        Freelancer(string n) : freelancer_name(n), projectCount(0) {};
         void addProject(Project* p){
 
+            // TO CHECK DUPLICATION -- Will not run on 0
             for (int i = 0; i < projectCount; i++)
             {
                 if (projects[i] == p)
@@ -28,6 +29,7 @@ class Freelancer{
                 }
             }
 
+            // CHECK 2
             if (projectCount >= 10) {
                 cout << "Cannot add more projects. Limit reached.\n";
                 return;
@@ -40,7 +42,7 @@ class Freelancer{
         }
 
         void listProjects(){
-            cout << name << "'s projects:\n";
+            cout << freelancer_name << "'s projects:\n";
             for (int i = 0; i < projectCount; i++){
                 cout << i+1 <<".";
                 projects[i]->getTitle();
