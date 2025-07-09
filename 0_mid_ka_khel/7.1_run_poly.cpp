@@ -15,7 +15,8 @@ public:
 
 int main()
 {
-    // Animal *a = new Dog();
+    // Animal *a = new animak[10];
+    // animal[0] = new
     // a->sound(); // Outputs: Bark
 
     Dog kutta;
