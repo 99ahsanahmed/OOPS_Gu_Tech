@@ -23,17 +23,11 @@ ArrayHolder(int arrSize){
 //     }
 // }
 
-// void arrFull(){
-//     for (int i = 0; i < arrSize; i++)
-//     {
-//         arr[i] = i;
-//     }
-// }
+
 void displayArr(){
-    
     for (int i = 0; i < arrSize; i++)
     {
-        cout << arr[i];
+        cout << arr[i] << " , ";
     }
     cout << endl;
 }
@@ -41,7 +35,6 @@ void displayArr(){
 void changeArray(){
     for (int i = 0; i < arrSize; i++)
     {
-        // arr[i] = 100;
         arr[i] = 10;
     }
     
@@ -58,12 +51,28 @@ int main()
 {
     ArrayHolder a1(5);
     ArrayHolder a2 = a1;
-    // ArrayHolder a2(5);// = a1;
-   a1.displayArr();
-    // a2.arrFull();
+    cout << "Before changing array of a2\n";
+    a1.displayArr();
     a2.displayArr();
+    
     a2.changeArray();
+    
+    cout << "After changing array of a2\n";
     a2.displayArr();
-   a1.displayArr();
+    a1.displayArr();
+
+    //Output in case of Custom copy constructor DEEP COPY:
+    // Before changing array of a2 1, 2, 3, 4, 5,
+    // 1, 2, 3, 4, 5,
+    // After changing array of a2 10, 10, 10, 10, 10,
+    // 1, 2, 3, 4, 5,
+
+    // Output in case of Default copy constructor SHALLOW COPY:
+    // Before changing array of a2
+    //  1 , 2 , 3 , 4 , 5 ,
+    //  1 , 2 , 3 , 4 , 5 ,
+    //  After changing array of a2
+    //  10 , 10 , 10 , 10 , 10 ,
+    //  10 , 10 , 10 , 10 , 10 ,
     return 0;
 }
