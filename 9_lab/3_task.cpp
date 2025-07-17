@@ -1,7 +1,5 @@
 #include<iostream>
 using namespace std;
-// Task 3: Create a Time class that represents time in hours and minutes. Implement operators to
-// add times, compare times, and increment/decrement by minutes.
 class Time{
     private:
     int hours, minutes;

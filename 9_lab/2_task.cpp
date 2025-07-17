@@ -8,12 +8,6 @@ private:
 
 public:
     Complex(double r = 0, double i = 0) : real(r), imag(i) {}
-    // TODO: Implement these operators
-    // Complex operator+(const Complex& other) const;✅
-    // Complex operator-(const Complex& other) const;✅
-    // Complex operator*(const Complex& other) const;✅
-    // bool operator==(const Complex& other) const;
-    // friend ostream& operator<<(ostream& os, const Complex& c);
     Complex operator+(const Complex& other) const {
         return Complex(real + other.real, imag + other.imag);
     }

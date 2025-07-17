@@ -1,5 +1,4 @@
 #include <iostream>
-// #include <cmath>
 using namespace std;
 
 class Polynomial {
@@ -10,7 +9,6 @@ private:
 public:
     Polynomial(int a, int b, int c) : a(a), b(b), c(c) {}
 
-    // Display polynomial
     void display() {
         cout << a << "x^2 + " << b << "x + " << c << endl;
     }
@@ -36,10 +34,10 @@ public:
     }
 };
 
-// Example usage
+
 int main() {
-    Polynomial p1(1, 2, 3);   // 1x^2 + 2x + 3
-    Polynomial p2(2, 3, 4);   // 2x^2 + 3x + 4
+    Polynomial p1(1, 2, 3);   
+    Polynomial p2(2, 3, 4);   
 
     cout << "Polynomial 1: ";
     p1.display();
