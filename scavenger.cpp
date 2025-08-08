@@ -7,7 +7,7 @@ class Bank{
     string type;
     public:
     virtual void limit() = 0;
-    virtual void interest() = 0;
+    virtual void interest() = 0;    
 
     virtual void getBalance() = 0;
     virtual void setBalance() = 0;
