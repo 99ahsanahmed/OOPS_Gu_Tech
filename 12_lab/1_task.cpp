@@ -16,9 +16,9 @@ int search(unordered_map<string, Book> &bookList, string author, multimap<string
 {
     int count = 0;
 
-    for (auto &pair : bookList)
+    for (std::pair<string,Book> i : bookList)
     {
-        Book book = pair.second;
+        Book book = i.second;
         if (book.author == author)
         {
             searchResult.insert({book.isbn, book});
@@ -53,9 +53,9 @@ int main()
     int resultCount = search(bookList, authorToSearch, searchResult);
 
     cout << "Books written by \"" << authorToSearch << "\":" << endl;
-    for (auto &pair : searchResult)
+    for (std::pair<string,Book> i : searchResult)
     {
-        Book book = pair.second;
+        Book book = i.second;
         cout << "ISBN: " << book.isbn << ", Title: " << book.title << endl;
     }
 
