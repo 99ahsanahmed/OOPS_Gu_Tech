@@ -1,15 +1,2 @@
-0_mid_ka_khel
-1_lab/a.exe
-2_lab/
-3_lab/a.exe
-4_lab/a.exe
-5_lab/a.exe
-6_lab/a.exe
-7_lab/a.exe
-8_lab/a.exe
-9_lab/a.exe
-10_lab/a.exe
-11_lab/a.exe
-12_lab/a.exe
-1_assignment/a.exe
+*.exe
 .vscode/
